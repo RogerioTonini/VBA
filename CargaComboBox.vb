@@ -1,9 +1,14 @@
-' Auto....: Rogerio Tonini
-' Data....: 03/05/2021
-' Objetivo: Carregar dados de tabelas para qualquer objeto ComboBox
-
-Sub CargaCombo(frm As UserForm, ByVal strObjeto As String, Optional wkbNomeArq As Workbook)
-
+Sub CargaCombo(frm As UserForm, ByVal strObjeto As String)
+'
+' Autor.....: ROGERIO TONINI
+' Data......: 03/05/2021
+' Objetivo..: Popular objeto ComboBox
+' Parametros: frm       - Formulário atual
+'             strObjeto - Qual o nome do objeto esta sendo manipulado.
+'                 Durante a execução é acrescentado um tipo diferente prefixo: "ws"  - CODENAME
+'                                                                              "tb"  - Nome da tabela
+'                                                                              "cmb" - Nome do ComboBox
+'
    Dim ctrControle   As Control
    
    Dim tbTable       As Excel.ListObject
@@ -15,10 +20,11 @@ Sub CargaCombo(frm As UserForm, ByVal strObjeto As String, Optional wkbNomeArq A
    Dim arrTmp        As Variant
    
    Dim wksNomePlan   As Worksheet
+   Dim wkbNomeArq    As Workbook
      
-   If wkbNomeArq Is Nothing Then Set wkbNomeArq = ThisWorkbook
+   Set wkbNomeArq = ThisWorkbook
    '
-   ' Captura o CODENAME da planilha a ser utilizada
+   ' Captura o CODENAME da planilha
    '
    For lngQtdPlan = 1 To wkbNomeArq.Worksheets.Count
       If wkbNomeArq.Worksheets(lngQtdPlan).CodeName = "ws" & strObjeto Then
@@ -28,7 +34,7 @@ Sub CargaCombo(frm As UserForm, ByVal strObjeto As String, Optional wkbNomeArq A
    Next lngQtdPlan
    Set tbTable = wksNomePlan.ListObjects("tb" & strObjeto)
    '
-   ' Carrega a Tabela para a matriz temporária e posterior para a ComboBox
+         ' Carrega a Tabela para a matriz temporária e posteriormente para o ComboBox
    '
    arrTmp = tbTable.Range
    arrTmp = Range("tb" & strObjeto).Value
