@@ -1,0 +1,9 @@
+Sub Atualiza_TabDin()
+   '
+   ' --- Atualiza Tabela Dinâmica
+   '
+   Dim pivotTable As pivotTable
+   For Each pivotTable In ActiveSheet.PivotTables
+      pivotTable.RefreshTable
+   Next
+End Sub

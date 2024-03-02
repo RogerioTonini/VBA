@@ -1,0 +1,24 @@
+Sub TelaExpandida()
+
+  ' Aplica a tela cheia
+  Application.DisplayFullScreen = True
+  
+  ' Barra de Fórmula
+  Application.DisplayFormulaBar = False
+  
+  ' Barra de status
+  Application.DisplayStatusBar = False
+  
+  ' Active de títulos de Linhas/Colunas
+  ActiveWindow.DisplayHeadings = False
+  
+  ' Guias das planilhas
+  DiplayWorkbookTabs = False
+  
+  ' Barras de Rolagem Horizontal
+  DisplayHorizontalScrollBars = False
+
+  ' Barra de Rolagem Vertical
+  DisplayVerticalScrollBar    = False
+
+EndSub
