@@ -1,0 +1,24 @@
+Sub TelaNormal()
+
+  ' Aplica a tela cheia
+  Application.DisplayFullScreen = True
+  
+  ' Barra de Fórmula
+  Application.DisplayFormulaBar = True
+  
+  ' Barra de status
+  Application.DisplayStatusBar = True
+  
+  ' Active de títulos de Linhas/Colunas
+  ActiveWindow.DisplayHeadings = True
+  
+  ' Guias das planilhas
+  DiplayWorkbookTabs = True
+  
+  ' Barras de Rolagem Horizontal
+  DisplayHorizontalScrollBars = True
+
+  ' Barra de Rolagem Vertical
+  DisplayVerticalScrollBar    = True
+
+EndSub

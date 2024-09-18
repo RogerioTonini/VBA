@@ -1,2 +1,2 @@
 # VBA
-Repositório destinado a rotinas em VBA
+# Linguagem VBA

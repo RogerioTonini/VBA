@@ -1,0 +1,61 @@
+Option Explicit
+
+Public WithEvents txtFormatDate As MSForms.TextBox
+Public WithEvents txtFormatCPF  As MSForms.TextBox
+Public WithEvents txtFormatCNPJ As MSForms.TextBox
+
+Private Sub txtFormatDate_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
+'
+' Para que esta classe funcione, na propriedade TAG do TextBox configurar como Date
+'
+   With txtFormatDate
+      .MaxLength = 10
+      '
+      Select Case KeyAscii
+         Case 48 To 57
+            If .SelStart = 2 Then .SelText = "/"
+            If .SelStart = 5 Then .SelText = "/"
+          Case Else
+             KeyAscii = 0
+       End Select
+   End With
+   
+End Sub
+
+Private Sub txtFormatCPF_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
+'
+' Para que esta classe funcione, na propriedade TAG do TextBox configurar como CPF
+'
+   With txtFormatCPF
+      .MaxLength = 14
+      '
+      Select Case KeyAscii
+         Case 48 To 57
+            If .SelStart = 3 Or .SelStart = 7 Then .SelText = "."
+            If .SelStart = 11 Then .SelText = "-"
+          Case Else
+             KeyAscii = 0
+       End Select
+   End With
+   
+End Sub
+
+Private Sub txtFormatCNPJ_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
+'
+' Para que esta classe funcione, na propriedade TAG do TextBox configurar como CNPJ
+'
+   With txtFormatCNPJ
+      .MaxLength = 19
+      '
+      Select Case KeyAscii
+         Case 48 To 57
+            If .SelStart = 3 Or .SelStart = 7 Then .SelText = "."
+            If .SelStart = 11 Then .SelText = "/"
+            If .SelStart = 16 Then .SelText = "-"
+            'If .SelStart = 7 Then .SelText = "."
+          Case Else
+             KeyAscii = 0
+       End Select
+   End With
+   
+End Sub

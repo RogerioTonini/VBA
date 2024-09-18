@@ -1,0 +1,15 @@
+Sub Select_Sheet()
+   '
+   With tdTabelas
+      .Select
+      .Activate
+      .Range("G3").Select
+   End With
+   '
+   Call Atualiza_TabDin
+   '
+   With pCmpCCred
+      .Select
+      .Activate
+   End With
+End Sub
