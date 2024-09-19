@@ -1,0 +1,13 @@
+Formato do editor
+
+Texto.........................- Primeiro Plano - Plano de Fundo - Indicador
+------------------------------+----------------+----------------+------------
+Texto Normal..................- Verde          - Preto          - Automático
+Texto de seleção..............- Automático     - Automático     - Automático
+Texto de erro de sintaxe......- Vermelho       - Preto          - Automático
+Texto de ponto de interrupção.- Branco         - Vermelho       - Amarelo
+Texto de comentário...........- Azul Claro     - Preto          - Automático
+Texto de palavra-chave .......- Rosa           - Preto          - Automático
+Texto de identificador........- Branco         - Preto          - Automático
+Texto de indicador............- Amarelo        - Preto          - Azul Claro
+Texto de retorno de chamada...- Branco         - Preto          - Verde
