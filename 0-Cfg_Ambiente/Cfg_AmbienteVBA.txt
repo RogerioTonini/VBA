@@ -11,3 +11,20 @@ Texto de palavra-chave .......- Rosa           - Preto          - Automático
 Texto de identificador........- Branco         - Preto          - Automático
 Texto de indicador............- Amarelo        - Preto          - Azul Claro
 Texto de retorno de chamada...- Branco         - Preto          - Verde
+
+Padrão
+------
+
+Texto.........................- Primeiro Plano - Plano de Fundo - Indicador
+------------------------------+----------------+----------------+------------
+Texto Normal..................- Automático     - Automático     - Automático
+Texto de seleção..............- Automático     - Automático     - Automático
+Texto de erro de sintaxe......- Vermelho       - Automático     - Automático
+Texto de ponto de execução....- Automático     - Amarelo        - Amarelo
+Texto de ponto de interrupção.- Automático     - Marrom         - Marrom
+Texto de comentário...........- Verde Escuro   - Automático     - Automático
+Texto de palavra-chave .......- Roxo           - Automático     - Automático
+Texto de identificador........- Automático     - Automático     - Automático
+Texto de indicador............- Automático     - Automático     - Azul Claro
+Texto de retorno de chamada...- Automático     - Automático     - Verde Claro
+
